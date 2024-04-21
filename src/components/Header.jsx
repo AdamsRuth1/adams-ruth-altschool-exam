@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import Logo from "../assets/Logo.png";
+import Ruth from "../assets/Ruth.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ const Header = () => {
         <div>
           <NavLink to="/">
             <img
-              src={Logo}
+              src={Ruth}
               alt="Github Logo"
               className="d-block"
               style={{ height: "40px" }}

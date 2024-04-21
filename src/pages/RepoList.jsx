@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Container, Pagination } from "react-bootstrap";
-import AB from "../assets/AB.jpg";
 import axios from "axios";
 
 const RepoList = () => {
@@ -26,7 +25,7 @@ const RepoList = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.github.com/users/abiolayoung/repos?page=${page}&per_page=9`
+        `https://api.github.com/users/AdamsRuth1/repos?page=${page}&per_page=9`
       )
       .then((response) => {
         setRepos(response.data);
@@ -46,17 +45,16 @@ const RepoList = () => {
           className="row"
         >
           <div
-            className="col-md-6 mb-4 mb-md-0"
-            style={{ marginTop: "70px", textAlign: "left" }}
+            className=" mb-4 mb-md-0"
+            style={{ marginTop: "70px", textAlign: "center" }}
           >
             <h1 className="primary-text-color secondary-font">
-              As a motivated software engineer, I've dedicated myself to
-              continuous learning and implementation to hone my skills in
+              As an enthusiastic software engineer, I am committed to ongoing
+              learning and practical application to refine my expertise in
               frontend development.
             </h1>
             <h6 className="secondary-text-color my-4">
-              Find information about my recent project by searching my Github
-              Repositories
+            Explore my recent project details by browsing through my GitHub repositories.
             </h6>
             <motion.div whileTap={{ scale: 0.95 }}>
               <input
@@ -71,19 +69,19 @@ const RepoList = () => {
                 }}
               />
 
-              <button className="primary-btn btn-lg" onClick={handleFilter}>
+              <button className="btn btn-primary btn-lg" onClick={handleFilter}>
                 Filter
               </button>
             </motion.div>
           </div>
-          <div className="col-md-6 text-center" style={{ textAlign: "right" }}>
+          {/* <div className="col-md-6 text-center" style={{ textAlign: "right" }}>
             <img
               src={AB}
               alt="Abiola Image"
               className="img-fluid"
               style={{ maxWidth: "100%", height: "auto" }}
             />
-          </div>
+          </div> */}
         </motion.div>
       </Container>
 
@@ -104,7 +102,7 @@ const RepoList = () => {
                 <h5 className="card-title">{repo.name}</h5>
                 <p className="card-text">{repo.description}</p>
                 <Link to={`/repos/${repo.name}`}>
-                  <button className="btn btn-secondary">View Repo</button>
+                  <button className="btn btn-primary">View Repo</button>
                 </Link>
               </div>
             </div>

@@ -9,7 +9,7 @@ const SingleRepo = () => {
   useEffect(() => {
     (async () => {
       try {
-        const repoUrl = "https://api.github.com/repos/abiolayoung";
+        const repoUrl = "https://api.github.com/repos/AdamsRuth1";
         const repoEndPoint = `${repoUrl}/${repoName}`;
 
         const response = await fetch(repoEndPoint);
@@ -41,13 +41,13 @@ const SingleRepo = () => {
   <p> <b>Pushed at:</b> {repo.pushed_at}</p>
   <div className="text-center">
     <Link to="/">
-      <button className="btn btn-secondary m-2">Go back</button>
+      <button className="btn btn-primary m-2">Go back</button>
     </Link>
     <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-      <button className="btn btn-secondary m-2">View on GitHub</button>
+      <button className="btn btn-primary m-2">View on GitHub</button>
     </a>
     <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
-      <button className="btn btn-secondary m-2">View Live</button>
+      <button className="btn btn-primary m-2">View Live</button>
     </a>
   </div>
 </div>
